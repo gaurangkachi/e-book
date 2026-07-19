@@ -895,4 +895,113 @@ font-size:20px;
     color:#e34c3d;
 }
 
+    /* =====================================
+   EXTRA SMALL DEVICES (300px and below)
+===================================== */
+@media (max-width: 300px) {
+
+    .hero-banner {
+        padding-top:35px;
+        height: 300px;
+    }
+
+    .hero-content h1 {
+        font-size: 19px;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+    }
+
+    .section-header h2{
+        font-size: 16px;
+    }
+
+    .section-header a{
+        font-size:13px;
+    }
+
+    .books-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .book{
+        width: 100px;
+    }
+
+    .book img{
+        width: 110px;
+        height:auto;
+    }
+
+    .book h3{
+        font-size: 14px;
+    }
+
+    .book p{
+        font-size: 12px;
+    }
+
+    .buy-btn{
+        width: 100%;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .mega-menu{
+    position:absolute;
+    top:60px;
+    width: 250px;
+    display:flex;
+    background:#fff;
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+    opacity:0;
+    visibility:hidden;
+    transition:.3s;
+    
 }
+
+.dropdown:hover .mega-menu{
+    opacity:1;
+    visibility:visible;
+}
+
+.column{
+    flex:3;
+    padding:20px;
+}
+
+
+
+.column h2{
+
+    font-size: 25px;
+    color:#333;
+    margin-bottom:15px;
+}
+
+.genre-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+.genre-list a
+{
+    display:block;
+    text-decoration:none;
+    color:#444;
+    font-size:18px;
+    
+    transition:.3s;
+}
+
+.genre-list a:hover{
+    color:#e34c3d;
+}
+
+}
+
