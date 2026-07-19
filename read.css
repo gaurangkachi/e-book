@@ -1,0 +1,202 @@
+/* ===========================
+   RESET
+=========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#fdfcf7;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#333;
+    padding:40px 20px;
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+.container{
+    width:90%;
+    max-width:960px;
+    margin:auto;
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+/* ===========================
+   HEADINGS
+=========================== */
+h1{
+    text-align:center;
+    color:#222;
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+h4{
+    margin-top:20px;
+    color:#444;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+.title-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+
+
+.author{
+    margin-top:15px;
+    font-style:italic;
+    color:#666;
+}
+
+/* ===========================
+   DIVIDERS
+=========================== */
+hr{
+    border:none;
+    border-top:1px solid #ddd;
+}
+
+.top-divider{
+    margin:25px 0 15px;
+}
+
+.bottom-divider{
+    margin:15px 0 30px;
+}
+
+/* ===========================
+   QUOTE
+=========================== */
+.quote-section{
+    padding:15px 0;
+}
+
+.quote{
+    font-weight:bold;
+    font-style:italic;
+    font-size:16px;
+    color:#222;
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+.content-wrapper{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:30px;
+    align-items:start;
+}
+
+
+.letter-body{
+    font-size:17px;
+    line-height:1.8;
+}
+
+.letter-body-2{
+    font-size:17px;
+    line-height:1.8;
+}
+
+.letter-body-2 p{
+    margin-bottom:20px;
+    text-align:justify;
+    color:#555;
+}
+
+
+.letter-body p{
+    margin-bottom:20px;
+    text-align:justify;
+    color:#555;
+}
+
+.salutation{
+    font-weight:bold;
+}
+
+.closing{
+    margin-top:35px;
+}
+
+.signature{
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+/* ===========================
+   IMAGE
+=========================== */
+.image-sidebar img{
+    width:100%;
+    display:block;
+    border-radius:8px;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+.btns{
+    display:flex;
+    justify-content:space-between;
+    margin-top:40px;
+}
+
+.btns a{
+    text-decoration:none;
+    background:#ff6b6b;
+    color:#fff;
+    padding:12px 24px;
+    border-radius:6px;
+    transition:.3s;
+}
+
+.btns a:hover{
+    background:#e74c3c;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width:768px){
+
+    .title-row{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .content-wrapper{
+        grid-template-columns:1fr;
+    }
+
+    .image-sidebar{
+        order:-1;
+        margin-bottom:20px;
+    }
+
+    .btns{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .btns a{
+        text-align:center;
+    }
+
+    .letter-body-2 p{
+        font-size: 25px;
+    }
+}

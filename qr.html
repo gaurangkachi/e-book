@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Payment Page</title>
+    <link rel="stylesheet" href="qr.css">
+</head>
+<body>
+
+    <div class="payment-box">
+
+        <div class="logo">
+            GK
+        </div>
+
+        <div class="book-section">
+
+            <div class="book-box">
+                <img src="fbook1.jpg" alt="Book Image">
+            </div>
+
+            <div class="book-details">
+                <p><strong>Selected Quantity:</strong> 1</p>
+
+                <p>Reading Available After Payment</p>
+
+                <p><strong>Book Name:</strong>Disclosure</p>
+
+                <h2>PAY -2.97</h2>
+            </div>
+
+        </div>
+
+        <div class="payment-section">
+
+            <h2>PAY using QR Code or UPI ID</h2>
+
+            <div class="qr-box">
+                <img src="qr.jpeg" alt="QR Code">
+            </div>
+
+            <p class="or">OR</p>
+
+            <div class="upi-box">
+                gkbooks@upi
+            </div>
+
+            <button class="pay-btn" onclick="payNow()">
+                PAY - $0.99
+            </button>
+
+            <p id="message"></p>
+
+        </div>
+
+    </div>
+
+    <script>
+        function payNow() {
+            document.getElementById("message").innerHTML =
+            "✅ Payment Successful! Reading is now available.";
+        }
+    </script>
+
+</body>
+</html>
