@@ -268,7 +268,7 @@ font-size:20px;
 
 /* Ebook Section */
 .freeebooks{
-    padding:50px;
+    padding:40px;
 }
 
 .Trendingbooks{
@@ -595,7 +595,7 @@ font-size:20px;
     /* Footer */
     .footer {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        
         gap: 30px;
         padding: 30px;
     }
@@ -785,6 +785,10 @@ font-size:20px;
     .section-header h2 {
         font-size: 22px;
     }
+
+    .footer-container{
+    grid-template-rows: repeat(2, 1fr);
+    }
 }
 
 /* =====================================
@@ -894,11 +898,13 @@ font-size:20px;
 .genre-list a:hover{
     color:#e34c3d;
 }
+.footer-container{
+    grid-template-columns:repeat(2,1fr);
+}
+}
 
-    /* =====================================
-   EXTRA SMALL DEVICES (300px and below)
-===================================== */
-@media (max-width: 300px) {
+
+@media (max-width: 330px) {
 
     .hero-banner {
         padding-top:35px;
@@ -1002,6 +1008,27 @@ font-size:20px;
 .genre-list a:hover{
     color:#e34c3d;
 }
+ /* Footer */
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(2,1);
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .footer-box {
+        text-align: left;
+    }
+
+    .footer-box h3 {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+
+    .footer-box a {
+        display: block;
+        font-size: 10px;
+        margin-bottom: 8px;
+    }
 
 }
-
