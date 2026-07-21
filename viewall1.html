@@ -7,7 +7,7 @@
     <title>Free Ebooks</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="viewall1.css">
+    <link rel="stylesheet" href="ex.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
@@ -15,26 +15,27 @@
 </head>
 <body>
 
-<!-- ================= NAVBAR ================= -->
-
+<!-- Navbar -->
 <nav class="navbar">
 
     <!-- Logo -->
     <div class="logo">
-        <h2>GK</h2>
+    <a href="index.html"><h2>GK</h2></a>
     </div>
 
-    <!-- Discover -->
+    <!-- Menu -->
     <ul class="menu">
 
         <li class="dropdown">
 
-            <a href="#">DISCOVER <i class="fa-solid fa-angle-down"></i></a>
+            <a href="#" class="discover-btn">
+                DISCOVER ▾
+            </a>
 
             <!-- Mega Menu -->
-
             <div class="mega-menu">
 
+                <!-- Genres -->
                 <div class="column">
 
                     <h2>Genres</h2>
@@ -42,12 +43,12 @@
                     <div class="genre-list">
 
                         <div>
-                            <a href="horror.html">Horror</a>
+                            <a href="Horror.html">Horror</a>
                             <a href="Action.html">Action & Adventure</a>
                             <a href="Biography.html">Bios & History</a>
                             <a href="child.html">Children's</a>
                             <a href="Fantasy.html">Fantasy</a>
-                            <a href="Historic.html">Historical Fiction</a>
+                            <a href="Historic.html">Historical </a>
                             
                         </div>
 
@@ -64,29 +65,34 @@
 
                 </div>
 
-            
             </div>
+
         </li>
+
     </ul>
 
-    <!-- Search -->
-
+    <!-- Search Box -->
     <div class="search-box">
-        <input type="text"
-        placeholder="Search books, authors or keyword">
-        <button>
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-    </div>
+    <input type="text"
+        id="searchInput"
+        placeholder="Search by title, author or keyword">
 
+    <button onclick="searchBook()">🔍</button>
+
+    <div id="searchResult"></div>
+</div>
+
+<!--home-->
+    <a href="index.html" class="home">🏠 Home</a>
+    
     <!-- Login -->
-
     <a href="login.html" class="login">
         Log In
     </a>
 
-</nav>
 
+
+</nav>
 <!-- ================= MAIN ================= -->
 
 <div class="main-container">
@@ -124,7 +130,7 @@
 <section class="content">
 <div class="section-header">
 <h2>FREE EBOOKS AND DEALS</h2>
-<a href="#">View All</a>
+
 </div>
 
 
