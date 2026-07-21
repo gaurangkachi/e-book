@@ -1,18 +1,25 @@
+/* ===========================
+   RESET
+=========================== */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    background:#fff;
-    padding-top:90px;
+    background:#f5f5f5;
 }
 
-/* =========================
-        NAVBAR
-========================= */
+/* ===========================
+   NAVBAR
+=========================== */
 
 .navbar{
     position:fixed;
@@ -20,16 +27,18 @@ body{
     left:0;
     width:100%;
     height:90px;
-    background-image:linear-gradient(to right,#fc5e4c,#f53434);
+    background:linear-gradient(to right,#fc5e4c,#f53434);
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:30px;
+    gap:25px;
     padding:15px 40px;
     z-index:1000;
 }
 
-/* Logo */
+/* ===========================
+   LOGO
+=========================== */
 
 .logo h2{
     color:#fff;
@@ -37,16 +46,16 @@ body{
     border-radius:50%;
     padding:12px 15px;
     font-size:28px;
-    text-decoration:none;
+    cursor:pointer;
 }
 
 .logo a{
-     text-decoration:none;
+    text-decoration:none;
 }
 
-/* =========================
-        DISCOVER MENU
-========================= */
+/* ===========================
+   MENU
+=========================== */
 
 .menu{
     list-style:none;
@@ -61,73 +70,16 @@ body{
     text-decoration:none;
     font-size:22px;
     font-weight:bold;
+    transition:.3s;
 }
 
 .dropdown>a:hover{
     color:#f5f5f5;
 }
 
-/* =========================
-        SEARCH BOX
-========================= */
-
-.search-box{
-    display:flex;
-    flex:1;
-    max-width:600px;
-}
-
-.search-box input{
-    width:100%;
-    padding:12px;
-    border:none;
-    outline:none;
-    font-size:16px;
-}
-
-.search-box button{
-    background:#14635f;
-    color:#fff;
-    border:none;
-    padding:0 18px;
-    cursor:pointer;
-    font-size:18px;
-}
-
-#searchResult{
-
-margin-top:8px;
-font-size:15px;
-font-weight:bold;
-
-}
-
-.home{
-    
-text-decoration:none;
-color: #eef7f6;
-font-size:20px;
-}
-/* =========================
-        LOGIN
-========================= */
-
-.login{
-    color:#fff;
-    text-decoration:none;
-    font-size:18px;
-    font-weight:bold;
-}
-
-.login:hover{
-    text-decoration:underline;
-}
-
-
-
-/* =========================
-        MEGA MENU
-========================= */
+/* ===========================
+   MEGA MENU
+=========================== */
 
 .mega-menu{
     position:absolute;
@@ -161,7 +113,6 @@ font-size:20px;
 
 .column h2,
 .resources h2{
-
     font-size:38px;
     color:#333;
     margin-bottom:20px;
@@ -188,847 +139,595 @@ font-size:20px;
     color:#e34c3d;
 }
 
-/* =========================
-     FEEDBACK BUTTON
-========================= */
+/* ===========================
+   SEARCH BOX
+=========================== */
 
-.feedback-button{
-    position:fixed;
-    top:50%;
-    right:-32px;
-    transform:rotate(-90deg);
-    background:#333;
-    color:#fff;
-    text-decoration:none;
-    padding:10px 25px;
+.search-box{
+    display:flex;
+    flex:1;
+    max-width:600px;
+    position:relative;
+}
+
+.search-box input{
+    width:100%;
+    padding:12px 15px;
+    border:none;
+    outline:none;
     font-size:16px;
-    border-radius:5px 5px 0 0;
-    box-shadow:0 0 10px rgba(0,0,0,.3);
-    z-index:1000;
+    border-radius:5px 0 0 5px;
+}
+
+.search-box button{
+    width:55px;
+    border:none;
+    background:#177b75;
+    color:#fff;
+    font-size:18px;
+    cursor:pointer;
+    border-radius:0 5px 5px 0;
     transition:.3s;
 }
 
-.feedback-button:hover{
-    background:#555;
+.search-box button:hover{
+    background:#0d5d59;
 }
 
-
-/* Hero Section Background & Layout */
-.hero-banner {
-    position: relative;
-    height: 300px;
-    background-image: url('background.jpeg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+#searchResult{
+    position:absolute;
+    top:55px;
+    left:0;
+    width:100%;
+    background:#fff;
+    border-radius:5px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    z-index:1000;
 }
 
-/* Dark tint over the background image for text readability */
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.45);
-    z-index: 1;
+/* ===========================
+   HOME
+=========================== */
+
+.home{
+    color:#fff;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
 }
 
-/* Text elements inside banner */
-.hero-content {
-    position: relative;
-    z-index: 2;
-    color: #ffffff;
-    max-width: 900px;
-    padding: 0 20px;
+.home:hover{
+    text-decoration:underline;
 }
 
-.hero-content h1 {
-    font-size: 42px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    margin-bottom: 20px;
+/* ===========================
+   LOGIN
+=========================== */
+
+.login{
+    color:#fff;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
 }
 
-.hero-content p {
-    font-size: 18px;
-    line-height: 1.6;
-    font-weight: normal;
+.login:hover{
+    text-decoration:underline;
 }
 
-.hero-content p a {
-    color: #00bfa5;
-    text-decoration: underline;
-    font-weight: bold;
+/* ===========================
+   MAIN CONTAINER
+=========================== */
+
+.main-container{
+    display:flex;
+    margin-top:90px;
 }
 
+/* ===========================
+   SIDEBAR
+=========================== */
 
-/* Ebook Section */
-.freeebooks{
-    padding:40px;
+.sidebar{
+    width:250px;
+    background:#2d2d2d;
+    position:fixed;
+    top:90px;
+    left:0;
+    min-height:calc(100vh - 90px);
+    overflow-y:auto;
+    z-index:999;
 }
 
-.Trendingbooks{
-    padding:30px;
+.sidebar-section{
+    padding:20px;
+    border-bottom:1px solid #444;
+}
+
+.sidebar-section h3{
+    color:#ff6b6b;
+    margin-bottom:15px;
+    font-size:20px;
+}
+
+.sidebar-section a{
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    padding:10px 0;
+    border-bottom:1px solid #444;
+    font-size:16px;
+    transition:.3s;
+}
+
+.sidebar-section a:hover{
+    color:#ff8b8b;
+    padding-left:10px;
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+
+.content{
+    flex:1;
+    margin-left:250px;
+    padding:35px;
 }
 
 .section-header{
-    padding-top:10px;
     display:flex;
+    justify-content:space-between;
     align-items:center;
-    margin-bottom:25px;
-    gap: 15px;
+    margin-bottom:30px;
 }
 
 .section-header h2{
-    color:#666;
-    font-size:25px;
+    color:#444;
+    font-size:30px;
 }
 
-.view-all{
-    font-size:20px;
-    color:#1b7f7a;
+.section-header a{
     text-decoration:none;
-}
-
-.book-container{
-    display:flex;
-    flex-wrap:wrap;
-    gap:20px;
-}
-
-.book{
-    width: 215px;
-    display:flex;
-    flex-direction:column;
-}
-
-.price{
-    margin-top:5px;
-}
-
-.buy-btn{
-    margin-top:auto;       /* Pushes button to bottom */
-    display:block;
-    width:100%;
-    text-align:center;
-    background:#1b7f7a;
-    color:#fff;
-    text-decoration:none;
-    padding:10px;
-    border-radius:5px;
-    font-size:16px;
+    color:#177b75;
     font-weight:bold;
 }
 
-.buy-btn:hover{
-    background:#14635f;
+.section-header a:hover{
+    text-decoration:underline;
+}
+
+/* ===========================
+   BOOK GRID
+=========================== */
+
+.book-container{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+/* ===========================
+   BOOK CARD
+=========================== */
+
+.book{
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:18px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+    transition:.3s ease;
+}
+
+.book:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
 .book img{
-    width:100%;
-    height:300px;
+    width:180px;
+    height:260px;
     object-fit:cover;
-    border-radius:5px;
+    border-radius:8px;
+    transition:.3s;
 }
 
-.book h3{
-    padding-top:20px;
-    margin-top:10px;
-    font-size:18px;
-    color: black;
+.book:hover img{
+    transform:scale(1.05);
 }
 
-.book h4{
-    padding-left:130px ;
+.book-info{
+    width:100%;
+    margin-top:15px;
 }
 
-.book a{
-   
-    font-size:18px;
-    text-decoration: none;
+.book-info h3{
+    font-size:22px;
+    color:#333;
+    margin-bottom:8px;
 }
-    
 
-
-
-.book p{
+.book-info p{
     color:#666;
-    margin:5px 0;
+    font-size:16px;
+    margin-bottom:10px;
 }
+
+/* ===========================
+   PRICE
+=========================== */
 
 .price{
-    margin-top:5px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    margin:10px 0;
 }
-
 
 .free,
 .new{
-    color:#d40000;
+    color:#e53935;
     font-size:22px;
     font-weight:bold;
 }
 
 .old{
-    color:gray;
+    color:#888;
     text-decoration:line-through;
-    margin-left:10px;
+    font-size:18px;
 }
 
+/* ===========================
+   BUY BUTTON
+=========================== */
 
-
-/* Browse Genres */
-
-.genres-section{
-    padding: 50px;
-    margin: 50px auto;
-}
-
-.title{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:25px;
-}
-
-.title h2{
-    font-size:25px;
-    color:#444;
-}
-
-.title a{
-    font-size: 20px;
-    text-decoration:none;
-    color:#1b7f7a;
-}
-
-.genres-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.genre-card{
-    position:relative;
-    overflow:hidden;
-    cursor:pointer;
-    border-radius:4px;
-}
-
-.genre-card img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-    display:block;
-    transition:0.4s;
-}
-
-.genre-card:hover img{
-    transform:scale(1.08);
-}
-
-.overlay{
-    position:absolute;
-    top:50%;
-    left:0;
-    width:100%;
-    transform:translateY(-50%);
-    background:rgba(0,0,0,0.45);
+.buy-btn{
+    display:inline-block;
+    width:160px;
+    padding:12px;
+    margin-top:10px;
+    background:#177b75;
     color:#fff;
+    text-decoration:none;
     text-align:center;
-    padding:15px;
-    font-size:18px;
-    font-weight:bold;
-}
-
-
-.section-header h2{
-    font-size:25px;
-}
-
-.footer{
-    background: linear-gradient(to right, #226562, #016e68);
-    color: white;
-    padding:50px 80px 20px;
-}
-.footer-container{
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    gap:30px;
-}
-.footer-column{
-    display:flex;
-    flex-direction:column;
-}
-
-.footer-column h3{
-    margin-bottom:20px;
-    font-size:22px;
-}
-
-.footer-column a{
-    text-decoration:none;
-    color:white;
-    margin-bottom:12px;
     font-size:16px;
-    transition:0.3s;
+    font-weight:bold;
+    border-radius:6px;
+    transition:.3s;
 }
 
-/* =====================================
-   TABLET (992px and below)
-===================================== */
-@media (max-width: 992px) {
+.buy-btn:hover{
+    background:#0f625d;
+    transform:translateY(-2px);
+}
 
-    /* Hero */
-    .hero-banner {
-        height: 260px;
-        padding: 20px;
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width:992px){
+
+    .navbar{
+        padding:15px 20px;
+        gap:15px;
     }
 
-    .hero-content h1 {
-        font-size: 34px;
-        letter-spacing: 1px;
+    .sidebar{
+        display:block;
+        width:220px;
     }
 
-    .hero-content p {
-        font-size: 17px;
+    .sidebar-section{
+        padding:15px;
     }
 
-    /* Genres */
-    .genres-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .sidebar-section h3{
+        font-size:18px;
     }
 
-    /* Navbar */
-    .navbar {
-        flex-wrap: wrap;
-        justify-content: center;
-        height: auto;
-        padding: 20px;
+    .sidebar-section a{
+        font-size:14px;
     }
 
-    body {
-        padding-top: 130px;
+    .content{
+        margin-left:220px;
+        padding:20px;
     }
 
-    .search-box {
-        order: 3;
-        width: 100%;
-        max-width: 100%;
+    .book-container{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
     }
 
-    .mega-menu {
-        width: 100%;
-        left: -80px;
-        flex-direction: column;
+    .book img{
+        width:150px;
+        height:220px;
     }
 
-    .genre-list {
-        grid-template-columns: 1fr;
+    .book-info h3{
+        font-size:18px;
     }
 
-    .resources {
-        width: 100%;
+    .buy-btn{
+        width:140px;
     }
 }
 
-/* =====================================
-   TABLET (768px and below)
-===================================== */
-@media (max-width: 780px) {
+/* ===========================
+   MOBILE
+=========================== */
 
-    /* Hero */
-    .hero-banner {
-        height: 230px;
-        padding: 20px;
+@media (max-width:768px){
+
+    .navbar{
+        flex-wrap:wrap;
+        height:auto;
+        padding:10px;
+        gap:10px;
     }
 
-    .hero-content {
-        padding: 0 15px;
+    .search-box{
+        width:100%;
+        max-width:100%;
+        order:3;
     }
 
-    .hero-content h1 {
-        font-size: 28px;
-        line-height: 1.3;
-        margin-bottom: 15px;
+    .mega-menu{
+        width:350px;
+        flex-direction:column;
     }
 
-    .hero-content p {
-        font-size: 16px;
-        line-height: 1.6;
+    /* Sidebar Always Visible */
+
+    .sidebar{
+        display:block;
+        width:170px;
     }
 
-    /* Navbar */
-    .navbar {
-        justify-content: center;
+    .sidebar-section{
+        padding:12px;
     }
 
-    .search-box {
-        width: 100%;
+    .sidebar-section h3{
+        font-size:16px;
     }
 
-    /* Section Header */
-    .section-header,
-    .title {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
+    .sidebar-section a{
+        font-size:13px;
+        padding:7px 0;
     }
 
-    /* Books */
-    .book-container {
-        justify-content: center;
+    .content{
+        margin-left:170px;
+        padding:15px;
     }
 
-    .book {
-        width: 180px;
+    .book-container{
+        grid-template-columns:repeat(2,1fr);
+        gap:15px;
     }
 
-    .book img {
-        height: 250px;
+    .book{
+        padding:12px;
     }
 
-    /* Footer */
-    .footer {
-        display: grid;
+    .book img{
+        width:120px;
+        height:180px;
+    }
+
+    .book-info h3{
+        font-size:16px;
+    }
+
+    .book-info p{
+        font-size:13px;
+    }
+
+    .buy-btn{
+        width:100%;
+        font-size:14px;
+    }
+}
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media (max-width:480px){
+
+    .logo h2{
+        font-size:20px;
+        padding:8px 10px;
+    }
+
+    .dropdown>a,
+    .home,
+    .login{
+        font-size:14px;
+    }
+
+    .search-box input{
+        font-size:13px;
+    }
+
+    .sidebar{
+        width:130px;
+    }
+
+    .sidebar-section{
+        padding:10px;
+    }
+
+    .sidebar-section h3{
+        font-size:13px;
+    }
+
+    .sidebar-section a{
+        font-size:11px;
+        padding:5px 0;
+    }
+
+    .content{
+        margin-left:130px;
+        padding:10px;
+    }
+
+    .book-container{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+    }
+
+    .book{
+        padding:8px;
+    }
+
+    .book img{
+        width:90px;
+        height:130px;
+    }
+    .section-header h2{
+        font-size:20px;
+    }
+    .book-info h3{
+        font-size:12px;
         
-        gap: 30px;
-        padding: 30px;
     }
 
-    .footer-box {
-        text-align: left;
+    .book-info p{
+        font-size:10px;
     }
 
-    .footer-box h3 {
-        font-size: 22px;
-        margin-bottom: 12px;
-    }
-
-    .footer-box a {
-        display: block;
-        font-size: 16px;
-        margin-bottom: 8px;
-    }
-
-    
-    .mega-menu{
-    position:absolute;
-    top:60px;
-    width: 400px;
-    display:flex;
-    background:#fff;
-    box-shadow:0 5px 20px rgba(0,0,0,.25);
-    opacity:0;
-    visibility:hidden;
-    transition:.3s;
-    
-}
-
-.dropdown:hover .mega-menu{
-    opacity:1;
-    visibility:visible;
-}
-
-.column{
-    flex:3;
-    padding:20px;
-}
-
-
-
-.column h2{
-
-    font-size:30px;
-    color:#333;
-    margin-bottom:15px;
-}
-
-.genre-list{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:10px;
-}
-
-.genre-list a
-{
-    display:block;
-    text-decoration:none;
-    color:#444;
-    font-size:25px;
-    
-    transition:.3s;
-}
-
-.genre-list a:hover{
-    color:#e34c3d;
-}
-}
-
-/* =====================================
-   MOBILE (600px and below)
-===================================== */
-@media (max-width: 600px) {
-
-    .genres-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .title {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .overlay {
-        font-size: 16px;
-    }
-
-    
-    .mega-menu{
-    position:absolute;
-    top:60px;
-    width: 250px;
-    display:flex;
-    background:#fff;
-    box-shadow:0 5px 20px rgba(0,0,0,.25);
-    opacity:0;
-    visibility:hidden;
-    transition:.3s;
-    
-}
-
-.dropdown:hover .mega-menu{
-    opacity:1;
-    visibility:visible;
-}
-
-.column{
-    flex:3;
-    padding:20px;
-}
-
-
-
-.column h2{
-
-    font-size: 25px;
-    color:#333;
-    margin-bottom:15px;
-}
-
-.genre-list{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:10px;
-}
-
-.genre-list a
-{
-    display:block;
-    text-decoration:none;
-    color:#444;
-    font-size:18px;
-    
-    transition:.3s;
-}
-
-.genre-list a:hover{
-    color:#e34c3d;
-}
-}
-
-/* =====================================
-   MOBILE (480px and below)
-===================================== */
-@media (max-width: 480px) {
-
-    /* Hero */
-    .hero-banner {
-        padding-top: 30px;
-        height: 300px;
-        padding: 15px;
-    }
-
-    .hero-content {
-        max-width: 100%;
-    }
-
-    .hero-content h1 {
-        font-size: 22px;
-        line-height: 1.3;
-        letter-spacing: 0.5px;
-    }
-
-    .hero-content p {
-        font-size: 14px;
-        line-height: 1.5;
-    }
-
-    .hero-content p a {
-        display: inline-block;
-        margin-top: 5px;
-    }
-
-    /* Books */
-    .book {
-        width: 150px;
-    }
-
-    .book img {
-        height: 220px;
-    }
-
-    .section-header h2 {
-        font-size: 22px;
-    }
-
-    .footer-container{
-    grid-template-rows: repeat(2, 1fr);
-    }
-}
-
-/* =====================================
-   EXTRA SMALL DEVICES (360px and below)
-===================================== */
-@media (max-width: 380px) {
-
-    .hero-banner {
-        padding-top:35px;
-        height: 300px;
-    }
-
-    .hero-content h1 {
-        font-size: 19px;
-    }
-
-    .hero-content p {
-        font-size: 13px;
-    }
-
-    .section-header h2{
-        font-size: 16px;
-    }
-
-    .section-header a{
+    .free,
+    .new{
         font-size:13px;
     }
 
-    .books-container{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        padding: 10px;
-    }
-
-    .book{
-        width: 100px;
-    }
-
-    .book img{
-        width: 110px;
-        height:auto;
-    }
-
-    .book h3{
-        font-size: 14px;
-    }
-
-    .book p{
-        font-size: 12px;
+    .old{
+        font-size:12px;
     }
 
     .buy-btn{
-        width: 100%;
-        font-size: 14px;
-        padding: 8px;
+        font-size:12px;
+        padding:8px;
     }
 
     .mega-menu{
-    position:absolute;
-    top:60px;
-    width: 250px;
-    display:flex;
-    background:#fff;
-    box-shadow:0 5px 20px rgba(0,0,0,.25);
-    opacity:0;
-    visibility:hidden;
-    transition:.3s;
-    
-}
-
-.dropdown:hover .mega-menu{
-    opacity:1;
-    visibility:visible;
-}
-
-.column{
-    flex:3;
-    padding:20px;
-}
-
-
-
-.column h2{
-
-    font-size: 25px;
-    color:#333;
-    margin-bottom:15px;
-}
-
-.genre-list{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:10px;
-}
-
-.genre-list a
-{
-    display:block;
-    text-decoration:none;
-    color:#444;
-    font-size:18px;
-    
-    transition:.3s;
-}
-
-.genre-list a:hover{
-    color:#e34c3d;
-}
-.footer-container{
-    grid-template-columns:repeat(2,1fr);
-}
-}
-
-
-@media (max-width: 330px) {
-
-    .hero-banner {
-        padding-top:35px;
-        height: 300px;
+        width:180px;
     }
 
-    .hero-content h1 {
-        font-size: 19px;
+    .column{
+        padding:10px;
     }
 
-    .hero-content p {
-        font-size: 13px;
+    .column h2{
+        font-size:20px;
     }
+
+    .genre-list{
+        grid-template-columns:1fr;
+    }
+
+    .genre-list a{
+        font-size:12px;
+    }
+}
+
+/* ===========================
+   EXTRA SMALL (375px)
+=========================== */
+
+@media (max-width:380px){
+
+    .sidebar{
+        width:110px;
+    }
+
+    .content{
+        margin-left:110px;
+    }
+
+    .book-container{
+        grid-template-columns:repeat(2,1fr);
+        gap:8px;
+    }
+
+    .book img{
+        width:80px;
+        height:120px;
+    }
+    .section-header h2{
+        font-size:18px;
+    }
+    .book-info h3{
+        font-size:10px;
+    }
+
+    .book-info p{
+        font-size:9px;
+    }
+
+    .free,
+    .new{
+        font-size:12px;
+    }
+
+    .old{
+        font-size:10px;
+    }
+
+    .buy-btn{
+        font-size:11px;
+    }
+}
+
+/* ===========================
+   320px DEVICES
+=========================== */
+
+@media (max-width:320px){
 
     .section-header h2{
-        font-size: 16px;
+    font-size: 15px;
     }
 
-    .section-header a{
-        font-size:13px;
+    .sidebar{
+        width:95px;
     }
 
-    .books-container{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        padding: 10px;
+    .content{
+        margin-left:95px;
     }
 
-    .book{
-        width: 100px;
+    .book-container{
+        grid-template-columns:repeat(2,1fr);
+        gap:6px;
     }
 
     .book img{
-        width: 110px;
-        height:auto;
+        width:70px;
+        height:105px;
     }
 
-    .book h3{
-        font-size: 14px;
+    .book-info h3{
+        font-size:8px;
     }
 
-    .book p{
-        font-size: 12px;
+    .book-info p{
+        font-size:7px;
     }
 
     .buy-btn{
-        width: 100%;
-        font-size: 14px;
-        padding: 8px;
+        font-size:10px;
+        padding:6px;
+        margin:0;
     }
-
-    .mega-menu{
-    position:absolute;
-    top:60px;
-    width: 250px;
-    display:flex;
-    background:#fff;
-    box-shadow:0 5px 20px rgba(0,0,0,.25);
-    opacity:0;
-    visibility:hidden;
-    transition:.3s;
-    
-}
-
-.dropdown:hover .mega-menu{
-    opacity:1;
-    visibility:visible;
-}
-
-.column{
-    flex:3;
-    padding:20px;
-}
-
-
-
-.column h2{
-
-    font-size: 25px;
-    color:#333;
-    margin-bottom:15px;
-}
-
-.genre-list{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:10px;
-}
-
-.genre-list a
-{
-    display:block;
-    text-decoration:none;
-    color:#444;
-    font-size:18px;
-    
-    transition:.3s;
-}
-
-.genre-list a:hover{
-    color:#e34c3d;
-}
- /* Footer */
-    .footer {
-        display: grid;
-        grid-template-columns: repeat(2,1);
-        gap: 10px;
-        padding: 10px;
-    }
-
-    .footer-box {
-        text-align: left;
-    }
-
-    .footer-box h3 {
-        font-size: 15px;
-        margin-bottom: 12px;
-    }
-
-    .footer-box a {
-        display: block;
-        font-size: 10px;
-        margin-bottom: 8px;
-    }
-
 }
