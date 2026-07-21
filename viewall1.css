@@ -36,7 +36,9 @@ body{
     z-index:1000;
 }
 
-/* Logo */
+/* ===========================
+   LOGO
+=========================== */
 
 .logo h2{
     color:#fff;
@@ -45,6 +47,10 @@ body{
     padding:12px 15px;
     font-size:28px;
     cursor:pointer;
+}
+
+.logo a{
+    text-decoration:none;
 }
 
 /* ===========================
@@ -64,16 +70,16 @@ body{
     text-decoration:none;
     font-size:22px;
     font-weight:bold;
+    transition:.3s;
 }
 
 .dropdown>a:hover{
     color:#f5f5f5;
 }
 
-
-/* =========================
-        MEGA MENU
-========================= */
+/* ===========================
+   MEGA MENU
+=========================== */
 
 .mega-menu{
     position:absolute;
@@ -133,7 +139,6 @@ body{
     color:#e34c3d;
 }
 
-
 /* ===========================
    SEARCH BOX
 =========================== */
@@ -142,6 +147,7 @@ body{
     display:flex;
     flex:1;
     max-width:600px;
+    position:relative;
 }
 
 .search-box input{
@@ -168,21 +174,33 @@ body{
     background:#0d5d59;
 }
 
+#searchResult{
+    position:absolute;
+    top:55px;
+    left:0;
+    width:100%;
+    background:#fff;
+    border-radius:5px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    z-index:1000;
+}
 
-/*===============
-    hpme
-===========*/
+/* ===========================
+   HOME
+=========================== */
 
 .home{
     color:#fff;
     text-decoration:none;
     font-size:18px;
     font-weight:bold;
+    transition:.3s;
 }
 
-.logo a{
-    text-decoration: none;
+.home:hover{
+    text-decoration:underline;
 }
+
 /* ===========================
    LOGIN
 =========================== */
@@ -192,6 +210,7 @@ body{
     text-decoration:none;
     font-size:18px;
     font-weight:bold;
+    transition:.3s;
 }
 
 .login:hover{
@@ -219,6 +238,7 @@ body{
     left:0;
     min-height:calc(100vh - 90px);
     overflow-y:auto;
+    z-index:999;
 }
 
 .sidebar-section{
@@ -238,6 +258,7 @@ body{
     text-decoration:none;
     padding:10px 0;
     border-bottom:1px solid #444;
+    font-size:16px;
     transition:.3s;
 }
 
@@ -279,13 +300,13 @@ body{
 }
 
 /* ===========================
-   BOOK CONTAINER
+   BOOK GRID
 =========================== */
 
 .book-container{
-    display:flex;
-    flex-direction:column;
-    gap:20px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
 }
 
 /* ===========================
@@ -293,15 +314,16 @@ body{
 =========================== */
 
 .book{
-    display:flex;
-    align-items:center;
-    gap:20px;
     background:#fff;
     border:1px solid #ddd;
     border-radius:10px;
     padding:18px;
-    transition:0.3s ease;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
     box-shadow:0 3px 10px rgba(0,0,0,.08);
+    transition:.3s ease;
 }
 
 .book:hover{
@@ -310,10 +332,10 @@ body{
 }
 
 .book img{
-    width:120px;
-    height:180px;
+    width:180px;
+    height:260px;
     object-fit:cover;
-    border-radius:6px;
+    border-radius:8px;
     transition:.3s;
 }
 
@@ -322,20 +344,20 @@ body{
 }
 
 .book-info{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-    flex:1;
+    width:100%;
+    margin-top:15px;
 }
 
 .book-info h3{
-    font-size:24px;
+    font-size:22px;
     color:#333;
+    margin-bottom:8px;
 }
 
 .book-info p{
     color:#666;
     font-size:16px;
+    margin-bottom:10px;
 }
 
 /* ===========================
@@ -344,9 +366,10 @@ body{
 
 .price{
     display:flex;
+    justify-content:center;
     align-items:center;
     gap:10px;
-    margin-top:5px;
+    margin:10px 0;
 }
 
 .free,
@@ -369,12 +392,12 @@ body{
 .buy-btn{
     display:inline-block;
     width:160px;
-    text-align:center;
-    margin-top:15px;
     padding:12px;
+    margin-top:10px;
     background:#177b75;
     color:#fff;
     text-decoration:none;
+    text-align:center;
     font-size:16px;
     font-weight:bold;
     border-radius:6px;
@@ -392,22 +415,45 @@ body{
 
 @media (max-width:992px){
 
+    .navbar{
+        padding:15px 20px;
+        gap:15px;
+    }
+
     .sidebar{
+        display:block;
         width:220px;
+    }
+
+    .sidebar-section{
+        padding:15px;
+    }
+
+    .sidebar-section h3{
+        font-size:18px;
+    }
+
+    .sidebar-section a{
+        font-size:14px;
     }
 
     .content{
         margin-left:220px;
-        padding:25px;
+        padding:20px;
+    }
+
+    .book-container{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
     }
 
     .book img{
-        width:100px;
-        height:150px;
+        width:150px;
+        height:220px;
     }
 
     .book-info h3{
-        font-size:20px;
+        font-size:18px;
     }
 
     .buy-btn{
@@ -424,8 +470,8 @@ body{
     .navbar{
         flex-wrap:wrap;
         height:auto;
-        padding:15px;
-        gap:15px;
+        padding:10px;
+        gap:10px;
     }
 
     .search-box{
@@ -435,103 +481,61 @@ body{
     }
 
     .mega-menu{
-        width:100%;
-        left:0;
+        width:350px;
         flex-direction:column;
-        gap:20px;
     }
 
-    .genre-list{
-        flex-direction:column;
-        gap:10px;
-    }
+    /* Sidebar Always Visible */
 
     .sidebar{
-        display:none;
+        display:block;
+        width:170px;
+    }
+
+    .sidebar-section{
+        padding:12px;
+    }
+
+    .sidebar-section h3{
+        font-size:16px;
+    }
+
+    .sidebar-section a{
+        font-size:13px;
+        padding:7px 0;
     }
 
     .content{
-        margin-left:0;
-        margin-top:40px;
-        padding:20px;
+        margin-left:170px;
+        padding:15px;
     }
 
-    .section-header{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:10px;
+    .book-container{
+        grid-template-columns:repeat(2,1fr);
+        gap:15px;
     }
 
     .book{
-        flex-direction:column;
-        text-align:center;
+        padding:12px;
     }
 
     .book img{
-        width:180px;
-        height:260px;
+        width:120px;
+        height:180px;
     }
 
-    .price{
-        justify-content:center;
+    .book-info h3{
+        font-size:16px;
+    }
+
+    .book-info p{
+        font-size:13px;
     }
 
     .buy-btn{
-        margin:15px auto 0;
+        width:100%;
+        font-size:14px;
     }
-
-    
-    .mega-menu{
-    position:absolute;
-    top:60px;
-    width: 400px;
-    display:flex;
-    background:#fff;
-    box-shadow:0 5px 20px rgba(0,0,0,.25);
-    opacity:0;
-    visibility:hidden;
-    transition:.3s;
-    
-}
-
-.dropdown:hover .mega-menu{
-    opacity:1;
-    visibility:visible;
-}
-
-.column{
-    flex:3;
-    padding:20px;
-}
-
-
-
-.column h2{
-
-    font-size:30px;
-    color:#333;
-    margin-bottom:15px;
-}
-
-.genre-list{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:10px;
-}
-
-.genre-list a
-{
-    display:block;
-    text-decoration:none;
-    color:#444;
-    font-size:25px;
-    
-    transition:.3s;
-}
-
-.genre-list a:hover{
-    color:#e34c3d;
-}
 }
 
 /* ===========================
@@ -540,106 +544,190 @@ body{
 
 @media (max-width:480px){
 
-    .navbar{
-        padding:10px;
-    }
-
     .logo h2{
-        font-size:22px;
-        padding:10px 13px;
+        font-size:20px;
+        padding:8px 10px;
     }
 
-    .dropdown>a{
-        font-size:18px;
+    .dropdown>a,
+    .home,
+    .login{
+        font-size:14px;
     }
 
     .search-box input{
-        font-size:14px;
+        font-size:13px;
     }
 
-    .section-header h2{
-        font-size:20px;
+    .sidebar{
+        width:130px;
+    }
+
+    .sidebar-section{
+        padding:10px;
+    }
+
+    .sidebar-section h3{
+        font-size:13px;
+    }
+
+    .sidebar-section a{
+        font-size:11px;
+        padding:5px 0;
+    }
+
+    .content{
+        margin-left:130px;
+        padding:10px;
+    }
+
+    .book-container{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
     }
 
     .book{
-        padding:15px;
+        padding:8px;
     }
 
     .book img{
-        width:150px;
-        height:220px;
+        width:90px;
+        height:130px;
     }
-
+    .section-header h2{
+        font-size:20px;
+    }
     .book-info h3{
-        font-size:18px;
+        font-size:12px;
+        
     }
 
     .book-info p{
-        font-size:14px;
+        font-size:10px;
     }
 
     .free,
     .new{
-        font-size:18px;
+        font-size:13px;
     }
 
     .old{
-        font-size:16px;
+        font-size:12px;
     }
 
     .buy-btn{
-        width:100%;
+        font-size:12px;
+        padding:8px;
     }
 
     .mega-menu{
-    position:absolute;
-    top:60px;
-    width:190px;
-    display:flex;
-    background:#fff;
-    box-shadow:0 5px 20px rgba(0,0,0,.25);
-    opacity:0;
-    visibility:hidden;
-    transition:.3s;
-    
+        width:180px;
+    }
+
+    .column{
+        padding:10px;
+    }
+
+    .column h2{
+        font-size:20px;
+    }
+
+    .genre-list{
+        grid-template-columns:1fr;
+    }
+
+    .genre-list a{
+        font-size:12px;
+    }
 }
 
-.dropdown:hover .mega-menu{
-    opacity:1;
-    visibility:visible;
+/* ===========================
+   EXTRA SMALL (375px)
+=========================== */
+
+@media (max-width:380px){
+
+    .sidebar{
+        width:110px;
+    }
+
+    .content{
+        margin-left:110px;
+    }
+
+    .book-container{
+        grid-template-columns:repeat(2,1fr);
+        gap:8px;
+    }
+
+    .book img{
+        width:80px;
+        height:120px;
+    }
+    .section-header h2{
+        font-size:18px;
+    }
+    .book-info h3{
+        font-size:10px;
+    }
+
+    .book-info p{
+        font-size:9px;
+    }
+
+    .free,
+    .new{
+        font-size:12px;
+    }
+
+    .old{
+        font-size:10px;
+    }
+
+    .buy-btn{
+        font-size:11px;
+    }
 }
 
-.column{
-    flex:3;
-    padding:10px;
-}
+/* ===========================
+   320px DEVICES
+=========================== */
 
+@media (max-width:320px){
 
+    .section-header h2{
+    font-size: 15px;
+    }
 
-.column h2{
+    .sidebar{
+        width:95px;
+    }
 
-    font-size: 25px;
-    color:#333;
-    margin-bottom:15px;
-}
+    .content{
+        margin-left:95px;
+    }
 
-.genre-list{
-    
-grid-template-columns:1fr;
-    
-}
+    .book-container{
+        grid-template-columns:repeat(2,1fr);
+        gap:6px;
+    }
 
-.genre-list a
-{
-    display:block;
-    text-decoration:none;
-    color:#444;
-    font-size:12px;
-        margin:5px 0;
-    transition:.3s;
-}
+    .book img{
+        width:70px;
+        height:105px;
+    }
 
-.genre-list a:hover{
-    color:#e34c3d;
-}
+    .book-info h3{
+        font-size:8px;
+    }
+
+    .book-info p{
+        font-size:7px;
+    }
+
+    .buy-btn{
+        font-size:10px;
+        padding:6px;
+        margin:0;
+    }
 }
