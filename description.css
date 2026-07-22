@@ -466,18 +466,25 @@ body{
         font-size:15px;
     }
 
+.mega-menu{
+        width:250px;
+    }
+
+    .column{
+        padding:10px;
+    }
+
+    .column h2{
+        font-size:20px;
+    }
+
     .genre-list{
-        grid-template-columns:1fr;
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
     }
 
-    .column h2,
-    .resources h2{
-        font-size:28px;
-    }
-
-    .genre-list a,
-    .resources a{
-        font-size:18px;
+    .genre-list a{
+        font-size:12px;
     }
 
     .book-container{
@@ -586,6 +593,29 @@ body{
         font-size:16px;
     }
 
+
+    .mega-menu{
+        width:180px;
+    }
+
+    .column{
+        padding:10px;
+    }
+
+    .column h2{
+        font-size:20px;
+        margin:0px;
+    }
+
+    .genre-list{
+       grid-template-columns:repeat(2,1fr);
+        gap:10px;
+    }
+
+    .genre-list a{
+        font-size:12px;
+    }
+
 }
 
 /* ---------- 425px ---------- */
@@ -635,6 +665,26 @@ body{
     .read{
         width:100%;
         text-align:center;
+    }
+
+    .mega-menu{
+        width:180px;
+    }
+
+    .column{
+        padding:10px;
+    }
+
+    .column h2{
+        font-size:20px;
+    }
+
+    .genre-list{
+        grid-template-columns:1fr;
+    }
+
+    .genre-list a{
+        font-size:12px;
     }
 
 }
@@ -705,6 +755,26 @@ body{
         width:34px;
         height:34px;
         font-size:14px;
+    }
+
+    .mega-menu{
+        width:180px;
+    }
+
+    .column{
+        padding:10px;
+    }
+
+    .column h2{
+        font-size:20px;
+    }
+
+    .genre-list{
+        grid-template-columns:1fr;
+    }
+
+    .genre-list a{
+        font-size:12px;
     }
 
 }
